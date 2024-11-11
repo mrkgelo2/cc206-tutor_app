@@ -1,3 +1,4 @@
+import 'package:cc206_tutor_app/bottom_nav.dart';
 import 'package:flutter/material.dart';
 
 class ProfileScreen extends StatelessWidget {
@@ -7,6 +8,7 @@ class ProfileScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
+      bottomNavigationBar: const Navigation(currentIndex: 4),
       body: Padding(
           padding: const EdgeInsets.all(20.0),
           child: Column(
