@@ -1,3 +1,4 @@
+import 'package:cc206_tutor_app/features/profile.dart';
 import 'package:flutter/material.dart';
 
 void main() {
