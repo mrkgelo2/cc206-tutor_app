@@ -77,7 +77,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   controller: usernameController,
                   decoration: const InputDecoration(
                     border: OutlineInputBorder(
-                      borderSide: BorderSide(color: Colors.teal, width: 2.0),
+                      borderSide: BorderSide(color: Colors.blue, width: 2.0),
                     ),
                     labelText: 'Email',
                   ),
@@ -126,7 +126,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   onPressed: _handleCreds,
                   style: ElevatedButton.styleFrom(
                     foregroundColor: Colors.white,
-                    backgroundColor: Colors.teal,
+                    backgroundColor: Colors.blue,
                     padding: const EdgeInsets.symmetric(
                         horizontal: 100, vertical: 15),
                     shape: RoundedRectangleBorder(
