@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'feature/sign_up.dart';
+import 'feature/sign_in.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Login',
+      title: 'Sign in',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
