@@ -47,7 +47,7 @@ class _NavigationState extends State<Navigation> {
     return BottomNavigationBar(
       onTap: _onTabTapped,
       currentIndex: currentIndex,
-      fixedColor: Colors.black,
+      fixedColor: const Color(0xFF128FC6),
       unselectedItemColor: Colors.grey,
       items: const [
         BottomNavigationBarItem(

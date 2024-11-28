@@ -66,11 +66,6 @@ class ProfileScreen extends StatelessWidget {
                 child: ListView(
                   children: [
                     ListTile(
-                      leading: const Icon(Icons.monetization_on_outlined),
-                      title: const Text('Earned Points'),
-                      onTap: () {},
-                    ),
-                    ListTile(
                       leading: const Icon(Icons.bookmark_outline),
                       title: const Text('Saved Tutors'),
                       onTap: () {},
