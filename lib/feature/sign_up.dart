@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:email_validator/email_validator.dart';
 
 class SignUpScreen extends StatefulWidget {
   const SignUpScreen({super.key});
@@ -10,60 +9,20 @@ class SignUpScreen extends StatefulWidget {
 }
 
 class _SignUpScreenState extends State<SignUpScreen> {
-  // Controllers for the text fields
   TextEditingController nameController = TextEditingController();
   TextEditingController emailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
-  TextEditingController confirmPasswordController = TextEditingController();
 
-  // Form key
   final _formKey = GlobalKey<FormState>();
 
-  // Method to handle credentials
-  void _handleSignUp() {
-    if (_formKey.currentState!.validate()) {
-      String name = nameController.text;
-      String email = emailController.text;
-      String password = passwordController.text;
-      String confirmPassword = confirmPasswordController.text;
-
-      if (password == confirmPassword) {
-        _showSuccessDialog(context);
-      } else {
-        _showErrorDialog(context, "Passwords do not match.");
-      }
-    }
-  }
-
-  // Success dialog
-  void _showSuccessDialog(BuildContext context) {
+  //success alert method
+  void successAlert(BuildContext context) {
     showDialog(
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
           title: const Text('Success!'),
           content: const Text('You have successfully signed up.'),
-          actions: [
-            TextButton(
-              child: const Text("Close"),
-              onPressed: () {
-                Navigator.of(context).pop();
-              },
-            ),
-          ],
-        );
-      },
-    );
-  }
-
-  // Error dialog
-  void _showErrorDialog(BuildContext context, String message) {
-    showDialog(
-      context: context,
-      builder: (BuildContext context) {
-        return AlertDialog(
-          title: const Text('Error'),
-          content: Text(message),
           actions: [
             TextButton(
               child: const Text("Close"),
@@ -89,6 +48,11 @@ class _SignUpScreenState extends State<SignUpScreen> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
+                  Image.asset(
+                    'assets/logo.png',
+                    width: 100,
+                    height: 100,
+                  ),
                   const Text(
                     'Create Account',
                     style: TextStyle(
@@ -101,42 +65,22 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     style: TextStyle(fontSize: 14, color: Colors.grey),
                   ),
                   const SizedBox(height: 40),
-
-                  // Name Form Field
                   TextFormField(
                     controller: nameController,
                     decoration: const InputDecoration(
                       border: OutlineInputBorder(),
                       labelText: 'Full Name',
                     ),
-                    validator: (value) {
-                      if (value == null || value.isEmpty) {
-                        return 'Please enter your name';
-                      }
-                      return null;
-                    },
                   ),
                   const SizedBox(height: 16),
-
-                  // Email Form Field
                   TextFormField(
                     controller: emailController,
                     decoration: const InputDecoration(
                       border: OutlineInputBorder(),
                       labelText: 'Email',
                     ),
-                    validator: (value) {
-                      if (value == null || value.isEmpty) {
-                        return 'Please enter your email';
-                      } else if (!EmailValidator.validate(value)) {
-                        return 'Enter a valid email address';
-                      }
-                      return null;
-                    },
                   ),
                   const SizedBox(height: 16),
-
-                  // Password Form Field
                   TextFormField(
                     controller: passwordController,
                     obscureText: true,
@@ -144,21 +88,12 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       border: OutlineInputBorder(),
                       labelText: 'Password',
                     ),
-                    validator: (value) {
-                      if (value == null || value.isEmpty) {
-                        return 'Please enter your password';
-                      } else if (value.length < 6) {
-                        return 'Password must be at least 6 characters';
-                      }
-                      return null;
-                    },
                   ),
-
                   const SizedBox(height: 40),
-
-                  // Sign Up Button
                   ElevatedButton(
-                    onPressed: _handleSignUp,
+                    onPressed: () {
+                      successAlert(context);
+                    },
                     style: ElevatedButton.styleFrom(
                       foregroundColor: Colors.white,
                       backgroundColor: const Color(0xFF128FC6),
@@ -172,12 +107,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       style: TextStyle(fontSize: 18),
                     ),
                   ),
-
                   const SizedBox(height: 16),
                   const Text('Or sign up with'),
                   const SizedBox(height: 16),
-
-                  // Google Sign Up Button
                   TextButton(
                     onPressed: () {},
                     style: TextButton.styleFrom(
@@ -201,8 +133,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     ),
                   ),
                   const SizedBox(height: 5),
-
-                  // Login hyperlink
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
