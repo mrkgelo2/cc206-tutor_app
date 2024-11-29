@@ -89,22 +89,18 @@ class _SignUpScreenState extends State<SignUpScreen> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Image.asset(
-                    'assets/logo.png',
-                    width: 100,
-                    height: 100,
-                    fit: BoxFit.cover,
-                  ),
                   const Text(
                     'Create Account',
-                    style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                    style: TextStyle(
+                        fontSize: 28,
+                        fontWeight: FontWeight.bold,
+                        color: Color(0xFF128FC6)),
                   ),
-                  const SizedBox(height: 5),
                   const Text(
-                    'Sign up to get started',
+                    'Sign up to get started and seek your tutor',
                     style: TextStyle(fontSize: 14, color: Colors.grey),
                   ),
-                  const SizedBox(height: 20),
+                  const SizedBox(height: 40),
 
                   // Name Form Field
                   TextFormField(
@@ -157,23 +153,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       return null;
                     },
                   ),
-                  const SizedBox(height: 16),
 
-                  // Confirm Password Form Field
-                  TextFormField(
-                    controller: confirmPasswordController,
-                    obscureText: true,
-                    decoration: const InputDecoration(
-                      border: OutlineInputBorder(),
-                      labelText: 'Confirm Password',
-                    ),
-                    validator: (value) {
-                      if (value == null || value.isEmpty) {
-                        return 'Please confirm your password';
-                      }
-                      return null;
-                    },
-                  ),
                   const SizedBox(height: 40),
 
                   // Sign Up Button
