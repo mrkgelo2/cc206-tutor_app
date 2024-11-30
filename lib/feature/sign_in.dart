@@ -10,14 +10,11 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
-  // Controllers for the text fields
   TextEditingController usernameController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
 
-  // Form key
   final _formKey = GlobalKey<FormState>();
 
-  // Method to handle credentials
   void _handleCreds() {
     if (_formKey.currentState!.validate()) {
       String email = usernameController.text;
@@ -29,7 +26,7 @@ class _LoginScreenState extends State<LoginScreen> {
     }
   }
 
-  // Alert method
+  // Alert pop up to show log in success
   void alertPopUp(BuildContext context) {
     showDialog(
       context: context,
@@ -61,9 +58,17 @@ class _LoginScreenState extends State<LoginScreen> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
+                Image.asset(
+                  'assets/logo.png',
+                  width: 120,
+                  height: 120,
+                ),
                 const Text(
                   'Welcome Back!',
-                  style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                  style: TextStyle(
+                      fontSize: 28,
+                      fontWeight: FontWeight.bold,
+                      color: Color(0xFF148fc5)),
                 ),
                 const SizedBox(height: 8),
                 const Text(
@@ -90,7 +95,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     return null;
                   },
                 ),
-                const SizedBox(height: 16),
+                const SizedBox(height: 12),
 
                 // Password Form Field
                 TextFormField(
@@ -149,8 +154,6 @@ class _LoginScreenState extends State<LoginScreen> {
                     foregroundColor: Colors.black,
                     padding: const EdgeInsets.symmetric(
                         horizontal: 50, vertical: 15),
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(5)),
                   ),
                   child: const Row(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -167,7 +170,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
                 const SizedBox(height: 32),
 
-                // Register hyperlink
+                // sign up hyperlink
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
