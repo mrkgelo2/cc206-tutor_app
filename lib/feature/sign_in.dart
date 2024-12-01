@@ -180,7 +180,9 @@ class _LoginScreenState extends State<LoginScreen> {
                   children: [
                     const Text("Don't have an account yet?"),
                     TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/sign_up');
+                      },
                       child: const Text('Register here'),
                     ),
                   ],

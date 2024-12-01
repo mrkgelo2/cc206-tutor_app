@@ -92,7 +92,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       labelText: 'Password',
                     ),
                   ),
-                  const SizedBox(height: 40),
+                  const SizedBox(height: 30),
                   ElevatedButton(
                     onPressed: () {
                       successAlert(context);
@@ -141,7 +141,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     children: [
                       const Text("Already have an account?"),
                       TextButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.pushNamed(context, '/sign_in');
+                        },
                         child: const Text('Login here',
                             selectionColor: Color(0xFF128FC6)),
                       ),
