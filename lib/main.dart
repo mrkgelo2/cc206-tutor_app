@@ -1,5 +1,6 @@
+import 'package:cc206_tutor_app/feature/opening_screen.dart';
+import 'package:cc206_tutor_app/feature/sign_in.dart';
 import 'package:flutter/material.dart';
-import 'feature/sign_in.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,7 +16,11 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const LoginScreen(),
+      initialRoute: '/',
+      routes: {
+        '/': (BuildContext ctx) => const OpeningScreen(),
+        '/sign_in': (BuildContext ctx) => const LoginScreen(),
+      },
     );
   }
 }

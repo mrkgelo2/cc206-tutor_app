@@ -50,6 +50,9 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        foregroundColor: const Color(0xFF148fc5),
+      ),
       body: Padding(
         padding: const EdgeInsets.all(50.0),
         child: Center(
@@ -75,14 +78,15 @@ class _LoginScreenState extends State<LoginScreen> {
                   'Use Credentials to access your account',
                   style: TextStyle(fontSize: 14, color: Colors.grey),
                 ),
-                const SizedBox(height: 32),
+                const SizedBox(height: 20),
 
                 // Username Form Field
                 TextFormField(
                   controller: usernameController,
                   decoration: const InputDecoration(
                     border: OutlineInputBorder(
-                      borderSide: BorderSide(color: Colors.blue, width: 2.0),
+                      borderSide:
+                          BorderSide(color: Color(0xFF148fc5), width: 2.0),
                     ),
                     labelText: 'Email',
                   ),
@@ -131,7 +135,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   onPressed: _handleCreds,
                   style: ElevatedButton.styleFrom(
                     foregroundColor: Colors.white,
-                    backgroundColor: Colors.blue,
+                    backgroundColor: const Color(0xFF148fc5),
                     padding: const EdgeInsets.symmetric(
                         horizontal: 100, vertical: 15),
                     shape: RoundedRectangleBorder(
@@ -143,9 +147,9 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                 ),
 
-                const SizedBox(height: 16),
+                const SizedBox(height: 10),
                 const Text('Or login with'),
-                const SizedBox(height: 16),
+                const SizedBox(height: 10),
 
                 // Google Login Button
                 TextButton(
@@ -153,7 +157,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   style: TextButton.styleFrom(
                     foregroundColor: Colors.black,
                     padding: const EdgeInsets.symmetric(
-                        horizontal: 50, vertical: 15),
+                        horizontal: 30, vertical: 15),
                   ),
                   child: const Row(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -168,7 +172,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     ],
                   ),
                 ),
-                const SizedBox(height: 32),
+                const SizedBox(height: 10),
 
                 // sign up hyperlink
                 Row(
