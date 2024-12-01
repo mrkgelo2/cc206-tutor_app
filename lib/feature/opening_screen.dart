@@ -51,7 +51,7 @@ class OpeningScreen extends StatelessWidget {
 
                 // Sign Up Button
                 ElevatedButton(
-                  onPressed: () => Navigator.pushNamed(context, '/sign_in'),
+                  onPressed: () => Navigator.pushNamed(context, '/sign_up'),
                   style: ElevatedButton.styleFrom(
                     backgroundColor: const Color(0xFF148fc5),
                     shape: RoundedRectangleBorder(
