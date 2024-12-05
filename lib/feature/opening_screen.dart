@@ -10,13 +10,11 @@ class OpeningScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            // Logo Section
+            // Logo, tagline
             Image.asset(
               'assets/logowname.png',
               height: 250,
             ),
-
-            // Tagline
             const Text(
               'Seeking knowledge in a friendly and easy way',
               style: TextStyle(
@@ -27,11 +25,10 @@ class OpeningScreen extends StatelessWidget {
 
             const SizedBox(height: 150),
 
-            // Buttons
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                // Sign In Button
+                // Sign in Button
                 ElevatedButton(
                   onPressed: () => Navigator.pushNamed(context, '/sign_in'),
                   style: ElevatedButton.styleFrom(
@@ -49,7 +46,7 @@ class OpeningScreen extends StatelessWidget {
                 ),
                 const SizedBox(width: 20),
 
-                // Sign Up Button
+                // Sign up Button
                 ElevatedButton(
                   onPressed: () => Navigator.pushNamed(context, '/sign_up'),
                   style: ElevatedButton.styleFrom(
