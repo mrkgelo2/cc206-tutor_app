@@ -1,5 +1,7 @@
 // ignore_for_file: unused_field
 
+import 'package:cc206_tutor_app/screens/dashboard.dart';
+import 'package:cc206_tutor_app/screens/schedule.dart';
 import 'package:flutter/material.dart';
 import 'package:table_calendar/table_calendar.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -51,8 +53,8 @@ class _DateSelectionState extends State<DateSelection> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        decoration: BoxDecoration(
-          color: const Color(0xFF2196f3), // Purple background
+        decoration: const BoxDecoration(
+          color: Color(0xFF2196f3), // Purple background
         ),
         child: SafeArea(
           child: Column(
@@ -197,7 +199,14 @@ class _DateSelectionState extends State<DateSelection> {
                                     borderRadius: BorderRadius.circular(10),
                                   ),
                                 ),
-                                onPressed: () {},
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => const Dashboard(),
+                                    ),
+                                  );
+                                },
                                 child: Text(
                                   "Cancel",
                                   style: GoogleFonts.poppins(
@@ -217,7 +226,14 @@ class _DateSelectionState extends State<DateSelection> {
                                     borderRadius: BorderRadius.circular(10),
                                   ),
                                 ),
-                                onPressed: () {},
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => const Schedule(),
+                                    ),
+                                  );
+                                },
                                 child: Text(
                                   "Schedule",
                                   style: GoogleFonts.poppins(

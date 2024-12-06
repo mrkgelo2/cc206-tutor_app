@@ -1,3 +1,4 @@
+import 'package:cc206_tutor_app/screens/date_selection.dart';
 import 'package:flutter/material.dart';
 
 class TutorProfileCardOverlay extends StatelessWidget {
@@ -107,7 +108,14 @@ class TutorProfileCardOverlay extends StatelessWidget {
                       SizedBox(
                           width: double.infinity,
                           child: ElevatedButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => const DateSelection(),
+                                ),
+                              );
+                            },
                             style: ElevatedButton.styleFrom(
                                 padding: const EdgeInsets.symmetric(
                                     vertical: 15, horizontal: 30),

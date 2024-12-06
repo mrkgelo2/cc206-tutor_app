@@ -1,3 +1,4 @@
+import 'package:cc206_tutor_app/feature/opening_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:cc206_tutor_app/bottom_navbar.dart';
 import 'package:cc206_tutor_app/screens/saved_tutors.dart';
@@ -94,15 +95,6 @@ class Profile extends StatelessWidget {
                   padding: const EdgeInsets.only(left: 16),
                   children: [
                     ListTile(
-                      leading: const Icon(Icons.monetization_on_outlined,
-                          color: Color(0xFF3D376C)),
-                      title: Text(
-                        'Earned Points',
-                        style: GoogleFonts.poppins(fontWeight: FontWeight.w500),
-                      ),
-                      onTap: () {},
-                    ),
-                    ListTile(
                       leading: const Icon(Icons.bookmark_outline,
                           color: Color(0xFF3D376C)),
                       title: Text(
@@ -148,7 +140,14 @@ class Profile extends StatelessWidget {
                         'Log out',
                         style: GoogleFonts.poppins(fontWeight: FontWeight.w500),
                       ),
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const OpeningScreen(),
+                          ),
+                        );
+                      },
                     ),
                   ],
                 ),

@@ -42,7 +42,8 @@ class OpeningScreen extends StatelessWidget {
                   ),
                   child: Text(
                     'Sign In',
-                    style: GoogleFonts.poppins(fontSize: 16, color: Colors.white),
+                    style:
+                        GoogleFonts.poppins(fontSize: 16, color: Colors.white),
                   ),
                 ),
                 const SizedBox(width: 20),
@@ -60,7 +61,8 @@ class OpeningScreen extends StatelessWidget {
                   ),
                   child: Text(
                     'Sign Up',
-                    style: GoogleFonts.poppins(fontSize: 16, color: Colors.white),
+                    style:
+                        GoogleFonts.poppins(fontSize: 16, color: Colors.white),
                   ),
                 ),
               ],
