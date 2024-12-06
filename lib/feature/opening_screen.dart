@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class OpeningScreen extends StatelessWidget {
   const OpeningScreen({super.key});
@@ -39,9 +40,9 @@ class OpeningScreen extends StatelessWidget {
                     padding: const EdgeInsets.symmetric(
                         horizontal: 50, vertical: 15),
                   ),
-                  child: const Text(
-                    'Sign in',
-                    style: TextStyle(fontSize: 16, color: Colors.white),
+                  child: Text(
+                    'Sign In',
+                    style: GoogleFonts.poppins(fontSize: 16, color: Colors.white),
                   ),
                 ),
                 const SizedBox(width: 20),
@@ -57,9 +58,9 @@ class OpeningScreen extends StatelessWidget {
                     padding: const EdgeInsets.symmetric(
                         horizontal: 50, vertical: 15),
                   ),
-                  child: const Text(
-                    'Sign up',
-                    style: TextStyle(fontSize: 16, color: Colors.white),
+                  child: Text(
+                    'Sign Up',
+                    style: GoogleFonts.poppins(fontSize: 16, color: Colors.white),
                   ),
                 ),
               ],

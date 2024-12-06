@@ -23,23 +23,28 @@ class _NavigationState extends State<Navigation> {
       currentIndex = index;
     });
 
+    String routeName;
     switch (index) {
       case 0:
-        Navigator.pushReplacementNamed(context, '/dashboard');
+        routeName = '/dashboard';
         break;
       case 1:
-        Navigator.pushReplacementNamed(context, '/search');
+        routeName = '/search';
         break;
       case 2:
-        Navigator.pushReplacementNamed(context, '/schedule');
+        routeName = '/schedule';
         break;
       case 3:
-        Navigator.pushReplacementNamed(context, '/messages');
+        routeName = '/messages';
         break;
       case 4:
-        Navigator.pushReplacementNamed(context, '/profile');
+        routeName = '/profile';
         break;
+      default:
+        return;
     }
+
+    Navigator.pushNamedAndRemoveUntil(context, routeName, (route) => false);
   }
 
   @override
@@ -47,27 +52,33 @@ class _NavigationState extends State<Navigation> {
     return BottomNavigationBar(
       onTap: _onTabTapped,
       currentIndex: currentIndex,
-      fixedColor: Colors.black,
+      selectedItemColor: Colors.blue,
       unselectedItemColor: Colors.grey,
+      type: BottomNavigationBarType.fixed,
       items: const [
         BottomNavigationBarItem(
           icon: Icon(Icons.home_outlined),
+          activeIcon: Icon(Icons.home),
           label: "Home",
         ),
         BottomNavigationBarItem(
           icon: Icon(Icons.search_outlined),
+          activeIcon: Icon(Icons.search),
           label: "Search",
         ),
         BottomNavigationBarItem(
           icon: Icon(Icons.calendar_month_outlined),
+          activeIcon: Icon(Icons.calendar_today),
           label: "Schedule",
         ),
         BottomNavigationBarItem(
           icon: Icon(Icons.message_outlined),
+          activeIcon: Icon(Icons.message),
           label: "Messages",
         ),
         BottomNavigationBarItem(
           icon: Icon(Icons.person_2_outlined),
+          activeIcon: Icon(Icons.person),
           label: "Me",
         ),
       ],

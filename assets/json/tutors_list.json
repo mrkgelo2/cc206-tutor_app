@@ -1,0 +1,57 @@
+[
+    {
+      "name": "Tyrone Barado",
+      "university": "West Visayas State University",
+      "description2": "Englsh, Math, Science",
+      "rating": "4",
+      "image": "assets/images/man3.jpg",
+      "tutoringHours":"100 hrs of tutoring",
+      "recommendation":"Highly Recommended",
+      "rate": "P200/hr",
+      "availability": "MTWThF 8am-12pm"
+    },
+    {
+      "name": "Juan Dela Cruz",
+      "university": "University of the Philippines Visayas",
+      "description2": "Englsh, Science",
+      "rating": "5",
+      "image": "assets/images/man.jpg",
+      "tutoringHours":"140 hrs of tutoring",
+      "recommendation":"Highly Recommended",
+      "rate": "P250/hr",
+      "availability": "TTH 1pm-5pm"
+    },
+    {
+      "name": "Pedro Capinpin",
+      "university": "Central Philippine University",
+      "description2": "Math, Science",
+      "rating": "3",
+      "image": "assets/images/man2.jpg",
+      "tutoringHours":"80 hrs of tutoring",
+      "recommendation":"Recommended",
+      "rate": "P150/hr",
+      "availability": "MTW 1pm-5pm"
+    },
+    {
+      "name": "Jane Dimasilayan",
+      "university": "University of the Philippines",
+      "description2": "Englsh, Math",
+      "rating": "4",
+      "image": "assets/images/jane.jpg",
+      "tutoringHours":"120 hrs of tutoring",
+      "recommendation":"Highly Recommended",
+      "rate": "P200/hr",
+      "availability": "TTHF 8am-12pm"
+    },
+    {
+      "name": "Lebron James",
+      "university": "Iloilo Science and Technology University",
+      "description2": "Math, History",
+      "rating": "5",
+      "image": "assets/images/lebron.jpg",
+      "tutoringHours":"160 hrs of tutoring",
+      "recommendation":"Highly Recommended",
+      "rate": "P250/hr",
+      "availability": "MTTH 8am-12pm"
+    }
+]
